@@ -24,7 +24,7 @@ class DashboardController extends Controller
       $countquickmail = Quickmail::all()->count();
     	$quick = Quickmail::orderBy('created_at', 'desc')->take(8)->get();
 
-    	return view('cd-admin.Dashboard.view-dashboard',compact('count','blog','quick','countquickmail','countreplied','countnotreplied'));
+    	return view('cd-admin.Dashboard.view-dashboard',compact('blog','quick','countquickmail','countreplied','countnotreplied'));
     }
 
     public function store()
